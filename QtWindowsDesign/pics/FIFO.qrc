@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="fifo_name">
+    <file>FIFO.png</file>
+    <file>先进先出算法.png</file>
+  </qresource>
+</RCC>
