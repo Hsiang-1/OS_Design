@@ -1,4 +1,14 @@
 ## update the process of the algorithm
+import sys
+from PyQt5.QtCore import QEventLoop, QTimer
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from functools import partial
+
+# time delay function
+def sleep_1():
+    loop = QEventLoop()
+    QTimer.singleShot(2000, loop.quit)
+    loop.exec_()
 
 # FIFO Algorithm
 def FIFO(jobNum, jobsArriveTime , jobsCostTime):
