@@ -1,0 +1,3501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WindowMain</class>
+ <widget class="QMainWindow" name="WindowMain">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1120</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>1</number>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="Tag">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1121</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane{border-width: 1px;border-color:white;border-style:outset;border-radius: 15px;background-color: rgb(116, 190, 255);background: transparent;}​
+
+QTabWidget::tab-bar{left:0px;}
+
+QTabBar::tab{width:160px;height:46px;font:20px;color:white;border-style:outset;border-radius: 5px;}
+
+QTabBar::tab:selected{margin-left: 1;margin-right: 0;background-color: rgb(255, 118, 106);}
+
+QTabBar::tab:!selected{margin-left: 1;margin-right: 0;background-color: rgb(245, 219, 159);}
+
+
+
+QTabBar::tab:hover:!selected{color: white;margin-left: 1;margin-right: 0;}
+
+QTabBar::tab:!selected{margin-top: 6px;margin-bottom: -6px;}​</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_1">
+     <attribute name="title">
+      <string>FIFO</string>
+     </attribute>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>130</width>
+        <height>585</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:pink;border-radius:15px;}
+</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;先&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;入&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;先&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;出&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;算&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;法&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>491</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}
+
+</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Control Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>60</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;预设页面号序列：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_101">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>70</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>100</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;内存物理块个数：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_102">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>110</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_101">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:15px;
+    border-style:outset;
+	border-width:3px; 
+    border-color:#6495ED
+}
+ 
+QPushButton:hover
+{
+    color:white;
+    background-color:rgb(44 , 137 , 255);
+}
+ 
+QPushButton:pressed
+{
+    color:white;
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>开始运行</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:15px;
+    border-style:outset;
+	border-width:3px; 
+    border-color:#6495ED
+}
+ 
+QPushButton:hover
+{
+    color:white;
+    background-color:rgb(44 , 137 , 255);
+}
+ 
+QPushButton:pressed
+{
+    color:white;
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>清除信息</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_100">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>50</y>
+        <width>171</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>20</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Message Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>10</y>
+        <width>191</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>10</y>
+        <width>201</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLabel{background-color:rgb(255, 196, 209,0.8);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>20</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;FIFO Summary&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>491</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}
+</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F7D674;border-radius:15px;}
+QPushButton:hover{background:yellow;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#6DDF6D;border-radius:15px;}
+QPushButton:hover{background:green;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F7D674;border-radius:15px;}
+QPushButton:hover{background:yellow;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#6DDF6D;border-radius:15px;}
+QPushButton:hover{background:green;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>921</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>370</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Display Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_1">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_6">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_7">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_8">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_9">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_10">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_11">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_49">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>50</y>
+        <width>171</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)
+</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;FIFO的算法思想是总是淘汰最先进入内存的页面，即选择在内存驻留时间最长的页面予以淘汰 。其算法特点简单、易实现；貌似公平，实际上不公平，不切实际，有些经常被访问的页面可能先被淘汰，因此性能较差。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_37">
+      <property name="geometry">
+       <rect>
+        <x>1050</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>0</y>
+        <width>990</width>
+        <height>585</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{background-image: url(:/pict/蓝色简约纹理.png);border-radius: 15px;}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <zorder>frame</zorder>
+     <zorder>label_10</zorder>
+     <zorder>label_7</zorder>
+     <zorder>label_8</zorder>
+     <zorder>label_2</zorder>
+     <zorder>label_3</zorder>
+     <zorder>lineEdit_101</zorder>
+     <zorder>label_4</zorder>
+     <zorder>lineEdit_102</zorder>
+     <zorder>pushButton_101</zorder>
+     <zorder>pushButton_2</zorder>
+     <zorder>textEdit_100</zorder>
+     <zorder>label_5</zorder>
+     <zorder>label_11</zorder>
+     <zorder>label_12</zorder>
+     <zorder>label</zorder>
+     <zorder>pushButton_4</zorder>
+     <zorder>pushButton_5</zorder>
+     <zorder>pushButton_3</zorder>
+     <zorder>pushButton_6</zorder>
+     <zorder>pushButton_7</zorder>
+     <zorder>pushButton_8</zorder>
+     <zorder>label_9</zorder>
+     <zorder>label_6</zorder>
+     <zorder>textEdit_1</zorder>
+     <zorder>textEdit_2</zorder>
+     <zorder>textEdit_3</zorder>
+     <zorder>textEdit_4</zorder>
+     <zorder>textEdit_5</zorder>
+     <zorder>textEdit_6</zorder>
+     <zorder>textEdit_7</zorder>
+     <zorder>textEdit_8</zorder>
+     <zorder>textEdit_9</zorder>
+     <zorder>textEdit_10</zorder>
+     <zorder>textEdit_11</zorder>
+     <zorder>textEdit_49</zorder>
+     <zorder>pushButton_37</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>LRU</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit_205">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_17">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#6DDF6D;border-radius:15px;}
+QPushButton:hover{background:green;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>100</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;内存物理块个数：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_202">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>10</y>
+        <width>191</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>20</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Message Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>370</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Display Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>491</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>10</y>
+        <width>201</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:rgb(255, 196, 209,0.8);border-radius:15px;}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>491</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_202">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>110</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_209">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_201">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>921</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_201">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>70</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_18">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#6DDF6D;border-radius:15px;}
+QPushButton:hover{background:green;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>20</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;LRU Summary&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_19">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:15px;
+	border-style:outset;
+	border-width:3px; 
+	border-color:#6495ED
+}
+ 
+QPushButton:hover
+{
+    color:white;
+    background-color:rgb(44 , 137 , 255);
+}
+ 
+QPushButton:pressed
+{
+    color:white;
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>清除信息</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_210">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_207">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_20">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_211">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Control Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_21">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F7D674;border-radius:15px;}
+QPushButton:hover{background:yellow;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>60</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;预设页面号序列：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_22">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F7D674;border-radius:15px;}
+QPushButton:hover{background:yellow;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_200">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>50</y>
+        <width>171</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_201">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:15px;
+    border-style:outset;
+	border-width:3px; 
+    border-color:#6495ED
+}
+ 
+QPushButton:hover
+{
+    color:white;
+    background-color:rgb(44 , 137 , 255);
+}
+ 
+QPushButton:pressed
+{
+    color:white;
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+
+}
+</string>
+      </property>
+      <property name="text">
+       <string>开始运行</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>131</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:pink;border-radius:15px;}
+background-color: rgb(255, 103, 171);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;最&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;近&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;最&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;久&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;未&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;使&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;用&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_203">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_204">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_208">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_24">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_206">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_50">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>50</y>
+        <width>171</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;LRU的算法思想是选择最近一段时间最久未使用的页面予以淘汰。其算法的特点是：考虑了程序设计的局部性原理，有一定合理性，但页面的过去和未来走向无必然联系；需要跟踪记录每一页的使用情况，系统开销较大。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_23">
+      <property name="geometry">
+       <rect>
+        <x>1050</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_32</zorder>
+     <zorder>label_29</zorder>
+     <zorder>textEdit_205</zorder>
+     <zorder>pushButton_17</zorder>
+     <zorder>label_25</zorder>
+     <zorder>textEdit_202</zorder>
+     <zorder>label_26</zorder>
+     <zorder>label_27</zorder>
+     <zorder>label_28</zorder>
+     <zorder>label_30</zorder>
+     <zorder>label_31</zorder>
+     <zorder>lineEdit_202</zorder>
+     <zorder>textEdit_209</zorder>
+     <zorder>textEdit_201</zorder>
+     <zorder>lineEdit_201</zorder>
+     <zorder>pushButton_18</zorder>
+     <zorder>label_33</zorder>
+     <zorder>pushButton_19</zorder>
+     <zorder>textEdit_210</zorder>
+     <zorder>textEdit_207</zorder>
+     <zorder>pushButton_20</zorder>
+     <zorder>textEdit_211</zorder>
+     <zorder>label_34</zorder>
+     <zorder>pushButton_21</zorder>
+     <zorder>label_35</zorder>
+     <zorder>pushButton_22</zorder>
+     <zorder>textEdit_200</zorder>
+     <zorder>pushButton_201</zorder>
+     <zorder>label_36</zorder>
+     <zorder>textEdit_203</zorder>
+     <zorder>textEdit_204</zorder>
+     <zorder>textEdit_208</zorder>
+     <zorder>pushButton_24</zorder>
+     <zorder>textEdit_206</zorder>
+     <zorder>textEdit_50</zorder>
+     <zorder>pushButton_23</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>LFU</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit_305">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>100</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;内存物理块个数：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_302">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>10</y>
+        <width>191</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>20</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Message Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>370</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Display Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>491</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>10</y>
+        <width>201</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color: rgb(51, 180, 255,0.8);border-radius:15px;}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>491</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_302">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>110</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_309">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_301">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>921</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_301">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>70</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>20</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;LFU Summary&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:15px;
+	border-style:outset;
+	border-width:3px; 
+	border-color:#6495ED
+}
+ 
+QPushButton:hover
+{
+    color:white;
+    background-color:rgb(44 , 137 , 255);
+}
+ 
+QPushButton:pressed
+{
+    color:white;
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>清除信息</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_310">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_307">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_311">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Control Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>60</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;预设页面号序列：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_300">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>50</y>
+        <width>171</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_301">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:15px;
+    border-style:outset;
+	border-width:3px; 
+    border-color:#6495ED
+}
+ 
+QPushButton:hover
+{
+    color:white;
+    background-color:rgb(44 , 137 , 255);
+}
+ 
+QPushButton:pressed
+{
+    color:white;
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+
+}
+</string>
+      </property>
+      <property name="text">
+       <string>开始运行</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>131</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color: rgb(51, 180, 255);border-radius:15px;}
+</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;最&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;少&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;使&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;用&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;算&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;法&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_303">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_304">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_308">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_306">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_51">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>50</y>
+        <width>181</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;LFU的算法思想是与LRU类似，设置一个移位寄存器记录页面访问情况，如要置换页面，选择∑Ri值最小的页面进行淘汰。其特点是：实现比较简单但并不能真正反映页面的使用情况。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>1050</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_31">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_27">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#6DDF6D;border-radius:15px;}
+QPushButton:hover{background:green;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_33">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F7D674;border-radius:15px;}
+QPushButton:hover{background:yellow;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_34">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#6DDF6D;border-radius:15px;}
+QPushButton:hover{background:green;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_35">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_36">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F7D674;border-radius:15px;}
+QPushButton:hover{background:yellow;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_17</zorder>
+     <zorder>label_20</zorder>
+     <zorder>textEdit_305</zorder>
+     <zorder>label_13</zorder>
+     <zorder>textEdit_302</zorder>
+     <zorder>label_14</zorder>
+     <zorder>label_15</zorder>
+     <zorder>label_16</zorder>
+     <zorder>label_18</zorder>
+     <zorder>label_19</zorder>
+     <zorder>lineEdit_302</zorder>
+     <zorder>textEdit_309</zorder>
+     <zorder>textEdit_301</zorder>
+     <zorder>lineEdit_301</zorder>
+     <zorder>label_21</zorder>
+     <zorder>pushButton_11</zorder>
+     <zorder>textEdit_310</zorder>
+     <zorder>textEdit_307</zorder>
+     <zorder>textEdit_311</zorder>
+     <zorder>label_22</zorder>
+     <zorder>label_23</zorder>
+     <zorder>textEdit_300</zorder>
+     <zorder>pushButton_301</zorder>
+     <zorder>label_24</zorder>
+     <zorder>textEdit_303</zorder>
+     <zorder>textEdit_304</zorder>
+     <zorder>textEdit_308</zorder>
+     <zorder>textEdit_306</zorder>
+     <zorder>textEdit_51</zorder>
+     <zorder>pushButton_9</zorder>
+     <zorder>pushButton_31</zorder>
+     <zorder>pushButton_27</zorder>
+     <zorder>pushButton_33</zorder>
+     <zorder>pushButton_34</zorder>
+     <zorder>pushButton_35</zorder>
+     <zorder>pushButton_36</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>CLOCK</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit_405">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_25">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#6DDF6D;border-radius:15px;}
+QPushButton:hover{background:green;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>100</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;内存物理块个数：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_402">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>10</y>
+        <width>191</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_39">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>20</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Message Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_40">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>370</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Display Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_41">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>491</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_42">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>10</y>
+        <width>201</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color: rgb(51, 180, 255,0.8);border-radius:15px;}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_43">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>491</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_402">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>110</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_409">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_401">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_44">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>921</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background:rgba(135,206,250,0.6);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_401">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>70</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_26">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#6DDF6D;border-radius:15px;}
+QPushButton:hover{background:green;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_45">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>20</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;CLOCK Summary&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_427">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:15px;
+	border-style:outset;
+	border-width:3px; 
+	border-color:#6495ED
+}
+ 
+QPushButton:hover
+{
+    color:white;
+    background-color:rgb(44 , 137 , 255);
+}
+ 
+QPushButton:pressed
+{
+    color:white;
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>清除信息</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_410">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_407">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_28">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_411">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_46">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;Control Area&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_29">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F7D674;border-radius:15px;}
+QPushButton:hover{background:yellow;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_47">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>60</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;预设页面号序列：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_30">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F7D674;border-radius:15px;}
+QPushButton:hover{background:yellow;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_400">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>50</y>
+        <width>171</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_401">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:15px;
+    border-style:outset;
+	border-width:3px; 
+    border-color:#6495ED
+}
+ 
+QPushButton:hover
+{
+    color:white;
+    background-color:rgb(44 , 137 , 255);
+}
+ 
+QPushButton:pressed
+{
+    color:white;
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+
+}
+</string>
+      </property>
+      <property name="text">
+       <string>开始运行</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_48">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>131</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color: rgb(51, 180, 255);border-radius:15px;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;时&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;钟&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;置&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;换&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;算&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic;&quot;&gt;法&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_403">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_404">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_408">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_32">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_406">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>400</y>
+        <width>41</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_52">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>50</y>
+        <width>181</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.5)</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;CLOCK置换算法的算法思想是 1.为每页设置一位访问位，再将内存中所有页面链成一个循环队列。2.某页被访问时，其访问位被置1，表示该页使用过。3.置换算法在选择一页淘汰时，循环检查各页的访问位：如果为1，则将该访问位置0，暂不换出；如果为0，则将该页换出，算法终止。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>1050</x>
+        <y>320</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_44</zorder>
+     <zorder>label_41</zorder>
+     <zorder>textEdit_405</zorder>
+     <zorder>pushButton_25</zorder>
+     <zorder>label_37</zorder>
+     <zorder>textEdit_402</zorder>
+     <zorder>label_38</zorder>
+     <zorder>label_39</zorder>
+     <zorder>label_40</zorder>
+     <zorder>label_42</zorder>
+     <zorder>label_43</zorder>
+     <zorder>lineEdit_402</zorder>
+     <zorder>textEdit_409</zorder>
+     <zorder>textEdit_401</zorder>
+     <zorder>lineEdit_401</zorder>
+     <zorder>pushButton_26</zorder>
+     <zorder>label_45</zorder>
+     <zorder>pushButton_427</zorder>
+     <zorder>textEdit_410</zorder>
+     <zorder>textEdit_407</zorder>
+     <zorder>pushButton_28</zorder>
+     <zorder>textEdit_411</zorder>
+     <zorder>label_46</zorder>
+     <zorder>pushButton_29</zorder>
+     <zorder>label_47</zorder>
+     <zorder>pushButton_30</zorder>
+     <zorder>textEdit_400</zorder>
+     <zorder>pushButton_401</zorder>
+     <zorder>label_48</zorder>
+     <zorder>textEdit_403</zorder>
+     <zorder>textEdit_404</zorder>
+     <zorder>textEdit_408</zorder>
+     <zorder>pushButton_32</zorder>
+     <zorder>textEdit_406</zorder>
+     <zorder>textEdit_52</zorder>
+     <zorder>pushButton</zorder>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_38">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>5</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background:#F76677;border-radius:15px;}
+QPushButton:hover{background:red;}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="one_rc.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_101</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>521</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>534</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_102</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
+     <y>232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_100</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>455</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>761</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>452</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>482</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_3</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>521</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>487</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_4</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>516</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_5</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>519</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>569</x>
+     <y>471</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_6</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>494</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>650</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_7</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>215</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>722</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_8</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>561</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>795</x>
+     <y>475</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_9</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>473</x>
+     <y>229</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>885</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_10</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>464</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>967</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_11</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>561</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1040</x>
+     <y>481</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_100</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>472</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>769</x>
+     <y>178</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_202</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_201</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>472</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>481</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_200</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>795</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_201</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>456</x>
+     <y>215</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_202</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>485</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_203</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>484</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_204</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>537</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>480</x>
+     <y>461</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_205</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>565</x>
+     <y>475</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_206</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>494</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>643</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_207</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>735</x>
+     <y>486</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_208</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>803</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_209</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>464</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>883</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_210</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>456</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>961</x>
+     <y>476</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_211</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>449</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1034</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_301</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>513</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_300</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>467</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>752</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_302</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>470</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_301</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>494</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>242</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_302</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>533</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>474</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_303</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>536</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>481</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_304</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>544</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_305</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>573</x>
+     <y>496</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_306</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>641</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_307</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>454</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>729</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_308</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>468</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>808</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_309</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>882</x>
+     <y>460</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_310</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>466</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>958</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_311</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>459</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1037</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_401</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>512</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>506</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_402</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>456</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_400</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>472</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_401</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>485</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>496</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_402</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>541</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>331</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_403</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>464</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_404</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>462</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_405</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>545</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_406</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>542</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>648</x>
+     <y>465</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_407</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>513</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>717</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_408</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>474</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>804</x>
+     <y>484</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_409</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>561</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>890</x>
+     <y>482</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_410</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>963</x>
+     <y>499</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_427</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit_411</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>205</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1037</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
