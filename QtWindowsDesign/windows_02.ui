@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>946</width>
-    <height>570</height>
+    <height>572</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>-110</x>
-      <y>-50</y>
+      <x>-70</x>
+      <y>-40</y>
       <width>1151</width>
       <height>681</height>
      </rect>
@@ -33,7 +33,7 @@
       <x>50</x>
       <y>350</y>
       <width>851</width>
-      <height>191</height>
+      <height>171</height>
      </rect>
     </property>
     <column>
@@ -76,7 +76,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>60</y>
+      <y>70</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -89,7 +89,7 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>60</y>
+      <y>70</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -102,7 +102,7 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>60</y>
+      <y>70</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -115,7 +115,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>100</y>
+      <y>110</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -128,7 +128,7 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>100</y>
+      <y>110</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -141,7 +141,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>30</y>
+      <y>40</y>
       <width>54</width>
       <height>12</height>
      </rect>
@@ -154,7 +154,7 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>30</y>
+      <y>40</y>
       <width>54</width>
       <height>12</height>
      </rect>
@@ -167,7 +167,7 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>30</y>
+      <y>40</y>
       <width>54</width>
       <height>12</height>
      </rect>
@@ -180,9 +180,9 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>60</y>
+      <y>70</y>
       <width>211</width>
-      <height>251</height>
+      <height>241</height>
      </rect>
     </property>
    </widget>
@@ -190,9 +190,9 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>60</y>
+      <y>70</y>
       <width>301</width>
-      <height>251</height>
+      <height>241</height>
      </rect>
     </property>
    </widget>
@@ -245,7 +245,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>终止</string>
+     <string>清空</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_8">
@@ -259,6 +259,45 @@
     </property>
     <property name="text">
      <string>随机输入</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>30</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>返回</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>530</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>平均周转时间</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>530</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>平均带权周转时间</string>
     </property>
    </widget>
   </widget>
