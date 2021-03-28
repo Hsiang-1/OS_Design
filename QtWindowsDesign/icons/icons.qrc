@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="quit">
+    <file>Home_4e7085.png</file>
+    <file>电源_#E5F5FF.png</file>
+  </qresource>
+</RCC>
