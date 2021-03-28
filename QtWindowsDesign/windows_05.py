@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
                            QToolButton,QPushButton:hover{
                                color:#fff;
                                border: 1px solid #9FA3A9;
-                               background-color:  rgba(250, 128, 144, 0.5);
+                               background-color:  rgba(255, 144, 99, 0.5);
                            }
                            QWidget#acount_group,#pwd_gourp{
                                border-bottom:1px solid #E0E0E0;
@@ -59,12 +59,12 @@ class Ui_MainWindow(object):
                                color:#378AFE;
                            }
                            QTextBrowser{
-                                background-color:  rgba(250, 128, 144, 0.2);
+                                background-color:  rgba(255, 144, 99, 0.2);
                                 border: 1px solid #E0E0E0;
                                 border-style:outset;
                            }
                            QTableWidget{
-                                background-color : rgba(250, 128, 144, 0.2);
+                                background-color : rgba(255, 144, 99, 0.2);
                                 border: 1px solid #E0E0E0;
                                 border-style:outset;
                            }
@@ -273,7 +273,7 @@ class AMainWindow(QWidget):
         quit.clicked.connect(self.close)  # 点击按钮之后关闭窗口
 
     def initUI(self):
-        pix = QPixmap('bigone.jpg')
+        pix = QPixmap('bigtwo.jpg')
         lb1 = QLabel(self)
         lb1.setGeometry(0, 0, 1000, 647)
         lb1.setStyleSheet("background-color:rgba(255,0,0,30)")
